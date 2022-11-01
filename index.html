@@ -5,16 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Day Portfolio</title>
+    <!-- external css file linked here -->
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
     <!-- navbar -->
     <nav>
-        <ul>
-            <li><a href="#"></a>Home</li>
-            <li><a href="#"></a>About</li>
-            <li><a href="#"></a>Portfolio</li>
-            <li><a href="#"></a>Testimonials</li>
-            <li><a href="#"></a>Contact</li>
+        <h1 class="logo"><a href="#">Logo</a></h1>
+        <ul class="main-nav">
+            <li><a href="#info">Info</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul> 
     </nav>
     <!-- end of navbar -->
@@ -23,7 +26,7 @@
         <!-- info header -->
         <header id="info">
             <h1>I'm Aron Roy</h1>
-            <p>Software Engineer</p>
+            <p class="occupationPara">Software Engineer</p>
             <img src="#" alt="">
         </header>
         <!-- end of info header -->
@@ -37,6 +40,15 @@
                 <li>CSS</li>
                 <li>Javascript</li>
             </ul>
+        </section>
+        <!-- portfolio -->
+        <section id="portfolio">
+            <h2>My Portfolio</h2>
+            <hr width="150px" style="margin-left: initial">
+            <div class="project" id="projectOne">Project 1</div>
+            <div class="project" id="projectTwo">Project 2</div>
+            <div class="project" id="projectThree">Project 3</div>
+            <div class="project" id="projectFour">Project 4</div>
         </section>
         <!-- testimonials -->
         <section id="testimonials">
@@ -60,11 +72,11 @@
         <!-- contact -->
         <section id="contact">
             <h2>Contact Me</h2>
-            <hr>
+            <hr width="150px" style="margin-left: initial">
             <div id="contact-info">
-                <p>Location</p>
-                <p>Phone</p>
-                <p>Email</p>
+                <p><a href="#">Location</a></p>
+                <p><a href="#">Phone</a></p>
+                <p><a href="#">Email</a></p>
             </div>
             <br>
             <p>Let's get in touch. Send me a message.</p>
@@ -79,10 +91,10 @@
         <!-- end of contact -->
         <!-- footer -->
         <footer id="footer">
-            <i class="icons">icon</i>
-            <i class="icons">icon</i>
-            <i class="icons">icon</i>
-            <i class="icons">icon</i>
+            <a href="#">Icon 1</a>
+            <a href="#">Icon 2</a>
+            <a href="#">Icon 3</a>
+            <a href="#">Icon 4</a>
         </footer>
     </main>
     <!-- end of main wrapper -->

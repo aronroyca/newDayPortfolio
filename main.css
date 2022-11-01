@@ -1,0 +1,206 @@
+/* CSS Resets */
+
+/* targets all elements in the document with * and adds the following rule */
+*,
+*::before,
+*::after {
+    /* ensures that the margins and borders are included in width and height calculations for all elements */
+    box-sizing: border-box;
+}
+
+/* general styles */
+
+/* targets all elements and adds the following rules */
+* {
+    /* adds a font color of #848484 (gray) */
+    color: #848484;
+    /* removes any underlines from anchor tags */
+    text-decoration: none;
+}
+
+/* targets the body element and adds the following rules */
+body {
+    /* A background color of #000000 */
+    background-color: #000000;
+    /* A primary font of Montserrat, and a backup font of sans-serif in cases where there is no font support */
+    font-family: 'Montserrat', sans-serif;
+    /* Increased line height betqween font of 1.6 */
+    line-height: 1.6;
+    /* Removal of default margins */
+    margin: 0;
+    /* Ensure that the height stays at 100% of the screen */
+    min-height: 100vh;
+}
+
+/* targets an element with the class of wrapper by using . and adds the following rules */
+.wrapper {
+    /* keeps the wrapper and all nested children elements at a maximum width of 768px */
+    max-width: 768px;
+    /* ensures that the margins are applied equally on both sides to center contents of wrapper */
+    margin: auto;
+}
+
+/* targets all img elements and adds the following rules */
+img {
+    /* ensures that all images fill the entire space available in their respective containers */
+    max-width: 100%;
+}
+
+/* targets all ordered and unordered list elements and adds the following rules */
+ol, ul {
+    /* removes all default stuling of lists */
+    list-style: none;
+}
+
+/* end of general styles */
+
+/* nav styles */
+
+/* targets all unordered list elements and adds the following rules */
+ul {
+    /* sets margin at 0 */
+    margin: 0;
+    /* sets padding at 0 */
+    padding: 0;
+}
+
+/* simultaneously targets all h1, h2, and h3 elements and adds the following rule */
+h1, h2, h3 {
+    /* adds color of #ffff (white) */
+    color: #ffff;
+}
+
+/* targets all anchor tags and adds the following rule */
+a {
+    /* changes the color to black */
+    color: #000000;
+}
+/* targets the element with a class of logo by using . and adds the following */
+.logo {
+    /* sets margin to 0 */
+    margin: 0;
+    /* sets font size to 1.45em */
+    font-size: 1.45em;
+}
+/* targets element with class of main-nav and adds the following rules */
+.main-nav {
+    /* adds top margin of 5px */
+    margin-top: 5px;
+}
+/* targets all anchor tags that are nested in logo and main-nav */
+.logo a, .main-nav a {
+    /* adds padding */
+    padding: 10px 15px;
+    /* transforms to uppercase */
+    text-transform: uppercase;
+    /* center align */
+    text-align: center;
+    /* changes display property to block */
+    display: block;
+}
+/* targets all anchor tags nested in our element with a class of main-nav and adds the following */
+.main-nav a:hover {
+    /* adds hover pseudo and turns gray when cursor hovers over */
+    color: #848484
+}
+
+/* targets the nav element and everything nested in it */
+nav {
+    /* padding */
+    padding: .5em 0;
+    /* border shorthand */
+    border: 1px solid #a2a2a2;
+    /* white background color */
+    background-color: #f4f4f4;
+    /* subtle shadow effect */
+    box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+    /* subtle border radius */
+    border-radius: 5px;
+}
+/* end of nav styles */
+
+/* info styles */
+#info {
+    text-align: center;
+    line-height: normal;
+}
+
+.occupationPara {
+    color: #ffffffcf;
+}
+/* end of info styles */
+
+/* about styles */
+#about {
+    text-align: justify;
+}
+/* end of about styles */
+
+/* project style */
+.project {
+    height: 25em;
+    margin: 2em;
+}
+
+#projectOne {
+    background-image: none;
+    background-position: center;
+    background-size: cover;
+}
+#projectTwo {
+    background-image: none;
+    background-position: center;
+    background-size: cover;
+}
+#projectThree {
+    background-image: none;
+    background-position: center;
+    background-size: cover;
+}
+#projectFour {
+    background-image: none;
+    background-position: center;
+    background-size: cover;
+}
+/* end of project styles */
+/* testimonial styles */
+.people {
+    text-align: center;
+}
+#person1 {
+    text-align: center;
+    float: left;
+}
+.people img {
+    border-radius: 50%;
+    width: 8em;
+    height: 8em;
+}
+/* end of testimonial styles */
+
+/* contact styles */
+#contact-info a {
+    color: #f4f4f4;
+}
+form p input {
+    padding: 1em;
+    width: 100%;
+}
+form p button {
+    width: 10em;
+    padding: 0.8em;
+}
+/* end of contact styles */
+
+/* footer styles */
+#footer a {
+    color: #f4f4f4;
+}
+footer {
+    margin-bottom: 2em;
+}
+/* end of footer styles */
+
+
+
+/* end of CSS */
