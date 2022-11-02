@@ -5,34 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Day Portfolio</title>
+    <!-- link Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.usebootstrap.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <!-- external css file linked here -->
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
     <!-- navbar -->
-    <nav>
-        <h1 class="logo"><a href="#">Logo</a></h1>
-        <ul class="main-nav">
-            <li><a href="#info">Info</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul> 
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark mb-5" style="background-color: #323131; font-size: 1.3em;">
+        <a class="navbar-brand" href="#">Logo</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button> 
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link" href="#info">Info</a>
+                <a class="nav-link" href="#about">About</a>
+                <a class="nav-link" href="#portfolio">Portfolio</a>
+                <a class="nav-link" href="#testimonials">Testimonials</a>
+                <a class="nav-link" href="#contact">Contact</a>
+            </div>
+        </div>
     </nav>
     <!-- end of navbar -->
     <!-- main wrapper -->
-    <main class="wrapper">
+    <main class="container">
         <!-- info header -->
-        <header id="info">
+        <header id="info" class="text-center">
             <h1>I'm Aron Roy</h1>
             <p class="occupationPara">Software Engineer</p>
-            <img src="#" alt="">
+            <img src="assets/me.jpg" alt="" class="img-fluid">
         </header>
         <!-- end of info header -->
         <!-- about -->
-        <section id="about">
-            <hr>
+        <section id="about" class="my-5">
+            <h2>Aron Roy</h2>
+            <hr width="150px;" style="margin-left: initial;">
             <p>Hi, I'm Aron Roy and I am a remote instructor for The Last Mile.</p>
             <h3>My Skills</h3>
             <ul>
@@ -46,22 +54,22 @@
             <h2>My Portfolio</h2>
             <hr width="150px" style="margin-left: initial">
             <div class="allProjects">
-                <div class="projectGroupOne">
-                    <div class="project" id="projectOne">
+                <div class="projectGroupOne row">
+                    <div class="project col-sm-6 d-flex flex-row justify-content-around align-items-end text-center" id="projectOne">
                         <a href="#">Project 1</a>
                         <a href="#">GitHub</a>
                     </div>
-                    <div class="project" id="projectTwo">
+                    <div class="project col-sm-6 d-flex flex-row justify-content-around align-items-end text-center" id="projectTwo">
                         <a href="#">Project 2</a>
                         <a href="#">GitHub</a>
                     </div>
                 </div>
-                <div class="projectGroupTwo">
-                    <div class="project" id="projectThree">
+                <div class="projectGroupTwo row">
+                    <div class="project col-sm-6 d-flex flex-row justify-content-around align-items-end text-center" id="projectThree">
                         <a href="#">Project 3</a>
                         <a href="#">GitHub</a>
                     </div>
-                    <div class="project" id="projectFour">
+                    <div class="project col-sm-6 d-flex flex-row justify-content-around align-items-end text-center" id="projectFour">
                         <a href="#">Project 4</a>
                         <a href="#">GitHub</a>
                     </div>
@@ -69,20 +77,20 @@
             </div>
         </section>
         <!-- testimonials -->
-        <section id="testimonials">
+        <section id="testimonials" class="my-5">
             <h3>My Reputation</h3>
-            <div class="people">
-                <div id="person1">
-                    <img src="assets/Blake.jpg" width="500px" height="500px" alt="Person 1">
+            <div class="people row">
+                <div id="person1" class="text-center col-sm-6">
+                    <img src="assets/Blake.jpg" width="500px" height="500px" alt="Person 1" class="img-fluid my-5">
                     <p>Blake</p>
                     <p>Chief of Design</p>
-                    <p>Aron is the best!</p>
+                    <p class="text-muted">Aron is the best!</p>
                 </div>
-                <div id="person2">
-                    <img src="assets/Kevin.jpg" width="500px" height="500px" alt="Person 2">
+                <div id="person2" class="text-center col-sm-6">
+                    <img src="assets/Kevin.jpg" width="500px" height="500px" alt="Person 2" class="img-fluid my-5">
                     <p>Kevin</p>
                     <p>Chief of People</p>
-                    <p>I second whatever Blake said!</p>
+                    <p class="text-muted">I second whatever Blake said!</p>
                 </div>
             </div>
         </section>
@@ -92,29 +100,37 @@
             <h2>Contact Me</h2>
             <hr width="150px" style="margin-left: initial">
             <div id="contact-info">
-                <p><a href="#">Location</a></p>
-                <p><a href="#">Phone</a></p>
-                <p><a href="#">Email</a></p>
+                <p><a href="#">Location</i></a></p>
+                <p><a href="#">Phone</i></a></p>
+                <p><a href="#">Email</i></a></p>
             </div>
             <br>
             <p>Let's get in touch. Send me a message.</p>
-            <form id="contact-form">
-                <input type="text" placeholder="Name" required name="Name">
-                <input type="text" placeholder="Email" required name="Email">
-                <input type="text" placeholder="Subject" required name="Subject">
-                <input type="text" placeholder="Message" required name="Message">
-                <button type="submit">Send Message</button>
+            <form>
+                <div class="form-group">
+                    <input type="text" placeholder="Name" required name="Name">
+                    <input type="text" placeholder="Email" required name="Email">
+                    <input type="text" placeholder="Subject" required name="Subject">
+                    <input type="text" placeholder="Message" required name="Message">
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
             </form>
         </section>
         <!-- end of contact -->
         <!-- footer -->
-        <footer id="footer">
-            <a href="#">Icon 1</a>
-            <a href="#">Icon 2</a>
-            <a href="#">Icon 3</a>
-            <a href="#">Icon 4</a>
+        <footer id="footer" class="my-4">
+            <div class="row">
+                <a href="#" class="col-1">Icon 1</a>
+                <a href="#" class="col-1">Icon 2</a>
+                <a href="#" class="col-1">Icon 3</a>
+                <a href="#" class="col-1">Icon 4</a>
+            </div>
         </footer>
     </main>
     <!-- end of main wrapper -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="dependencies/popper.js"></script>
+    <script src="https://cdn.usebootstrap.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </body>
 </html>

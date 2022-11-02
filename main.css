@@ -13,7 +13,7 @@
 /* targets all elements and adds the following rules */
 * {
     /* adds a font color of #848484 (gray) */
-    color: #848484;
+    color: #ffff;
     /* removes any underlines from anchor tags */
     text-decoration: none;
 }
@@ -32,20 +32,6 @@ body {
     min-height: 100vh;
 }
 
-/* targets an element with the class of wrapper by using . and adds the following rules */
-.wrapper {
-    /* keeps the wrapper and all nested children elements at a maximum width of 768px */
-    max-width: 768px;
-    /* ensures that the margins are applied equally on both sides to center contents of wrapper */
-    margin: auto;
-}
-
-/* targets all img elements and adds the following rules */
-img {
-    /* ensures that all images fill the entire space available in their respective containers */
-    max-width: 100%;
-}
-
 /* targets all ordered and unordered list elements and adds the following rules */
 ol, ul {
     /* removes all default stuling of lists */
@@ -54,248 +40,60 @@ ol, ul {
 
 /* end of general styles */
 
-/* nav styles */
-
-/* targets all unordered list elements and adds the following rules */
-ul {
-    /* sets margin at 0 */
-    margin: 0;
-    /* sets padding at 0 */
-    padding: 0;
-}
-
-/* simultaneously targets all h1, h2, and h3 elements and adds the following rule */
-h1, h2, h3 {
-    /* adds color of #ffff (white) */
-    color: #ffff;
-}
-
-/* targets all anchor tags and adds the following rule */
-a {
-    /* changes the color to black */
-    color: #000000;
-}
-/* targets the element with a class of logo by using . and adds the following */
-.logo {
-    /* sets margin to 0 */
-    margin: 0;
-    /* sets font size to 1.45em */
-    font-size: 1.45em;
-}
-/* targets element with class of main-nav and adds the following rules */
-.main-nav {
-    /* adds top margin of 5px */
-    margin-top: 5px;
-}
-/* targets all anchor tags that are nested in logo and main-nav */
-.logo a, .main-nav a {
-    /* adds padding */
-    padding: 10px 15px;
-    /* transforms to uppercase */
-    text-transform: uppercase;
-    /* center align */
-    text-align: center;
-    /* changes display property to block */
-    display: block;
-}
-/* targets all anchor tags nested in our element with a class of main-nav and adds the following */
-.main-nav a:hover {
-    /* adds hover pseudo and turns gray when cursor hovers over */
-    color: #848484
-}
-
-/* targets the nav element and everything nested in it */
-nav {
-    /* padding */
-    padding: .5em 0;
-    /* border shorthand */
-    border: 1px solid #a2a2a2;
-    /* white background color */
-    background-color: #f4f4f4;
-    /* subtle shadow effect */
-    box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
-    /* subtle border radius */
-    border-radius: 5px;
-}
-/* end of nav styles */
-
 /* info styles */
-#info {
-    text-align: center;
-    line-height: normal;
-}
-
 .occupationPara {
-    color: #ffffffcf;
+    color: #808080;
+    font-size: 1.2em;
 }
 /* end of info styles */
 
-/* about styles */
-#about {
-    text-align: justify;
-}
-/* end of about styles */
-
-/* project style */
-.allProjects {
-    display: flex;
-    flex-flow: column;
-}
-.projectGroupOne, .projectGroupTwo {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-}
-
-.project a {
-    background-color: #ffffffd1;
-    width: 100%;
-    text-align: center;
-}
-
-.project a:hover {
-    color: #848484;
-}
-
-#projectOne{
-    background-image: none;
-    background-position: center;
-    background-size: cover;
-}
-
-.project {
-    display: flex;
-    flex-flow: row;
-    justify-content: space-evenly;
-    align-items: flex-end;
-    height: 15em;
-    margin: 0.8em;
-    width: 45%;
-    color:#000000;
-}
-
+/* portfolio styles */
 #projectOne,
 #projectTwo,
 #projectThree,
-#ProjectFour {
+#projectFour {
     background-position: center;
     background-size: cover;
+    height: 100vh;
 }
 
 #projectOne {
-    background-image: none;
+    background-image: url("assets/cha.jpg");
 }
 
 #projectTwo {
-    background-image: none;
+    background-image: url("assets/choleroti.jpg");
 }
-
 #projectThree {
-    background-image: none;
+    background-image: url("assets/sausagerice.jpg");
 }
-
 #projectFour {
-    background-image: none;
+    background-image: url("assets/somisomi.jpg");
 }
 
-/* end of project styles */
+.project a {
+    color: white;
+    text-decoration: none;
+    background-color: #000000a1;
+    width: 100%;
+    font-size: 1.3em;
+}
+
+.project a:hover {
+    color: yellow;
+}
+/* end portfolio styles */
+
 /* testimonial styles */
-.people {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
+.people p:nth-child(2) {
+    font-size: 1.4em;
 }
-#person1, #person2 {
-    text-align: center;
-}
+
 .people img {
     border-radius: 50%;
-    width: 8em;
-    height: 8em;
+    height: 250px;
 }
+
 /* end of testimonial styles */
-
-/* contact styles */
-#contact-info a {
-    color: #f4f4f4;
-}
-form p input {
-    padding: 1em;
-    width: 100%;
-}
-form p button {
-    width: 10em;
-    padding: 0.8em;
-}
-/* end of contact styles */
-
-/* footer styles */
-#footer a {
-    color: #f4f4f4;
-}
-footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-bottom: 2em;
-}
-/* end of footer styles */
-
-/* media queries */
-@media  only screen and (max-width: 768px) {
-    #about {
-        margin: 0 2em;
-    }
-
-    #info,
-    .main-nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 80%;
-        margin: 0 auto;
-        max-width: 1150px;
-    }
-
-    section, footer {
-        margin: 0 2em;
-    }
-
-    .project {
-        width: 100%;
-        font-size: 1.2em;
-    }
-    .people {
-        flex-direction: column;
-    }
-    form {
-        text-align: center;
-    }
-    footer {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-evenly;
-        margin-bottom: 2em;
-    }
-}
-
-@media only screen and (min-width: 768px) {
-    .main-nav {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-}
-/* 
-@media only screen and (min-width: 800px) {
-    .wrapper {
-        background-color: white;
-    }
-    p {
-        color: goldenrod;
-    }
-} */
-/* end of media queries */
-
 
 /* end of CSS */
