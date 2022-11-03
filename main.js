@@ -61,45 +61,37 @@
 // console.log(myCar.description());
 
 $("document").ready(function () {
-  let testimonials = [
-    {
-      name: "Blake",
-      title: "Chief of Designing",
-      quote: "Aron is the best!",
-      getQuote() {
-        if (this.quote !== "" && this.quote !== " ") {
-          return `${this.quote}`;
-        } else {
-          return "A quote does not exist";
-        }
-      },
-    },
-    {
-      name: "Kevin",
-      title: "Chief of People",
-      quote: "I second whatever Blake said!",
-      getQuote() {
-        if (this.quote !== "" && this.quote !== " ") {
-          return `${this.quote}`;
-        } else {
-          return "A quote does not exist";
-        }
-      },
-    },
-  ];
+  function Testimonial(name, title, quote) {
+    this.name = name;
+    this.title = title;
+    this.quote = quote;
+    this.getHTML = function getHTML() {
+      return ` <div id="person${this.name}" class="text-center col-sm-6">
+                    <img src="assets/${this.name}.jpg" width="500px" height="500px" alt="Person ${this.name}" class="img-fluid my-5">
+                    <p class="personName${this.name}" id="personName${this.name}">${this.name}</p>
+                    <p class="personTitle${this.name}">${this.title}</p>
+                    <p class="personQuote${this.name}">${this.quote}<i class="text-muted"></i></p>
+                </div>`;
+    };
+  }
+
+  let testimonials = [];
+
+  testimonials.push(
+    new Testimonial("Blake", "Chief of Design", "Aron is the best!")
+  );
+  testimonials.push(
+    new Testimonial("Kevin", "Chief of People", "I second whatever Blake said!")
+  );
+  console.log(testimonials);
+
   //   console.log(person1.getQuote(), person2.getQuote());
 
   let testContainer = document.querySelector(".people");
   function testimonialRender() {
     testContainer.innerHTML = "";
     for (let i = 0; i < testimonials.length; i++) {
-      testContainer.innerHTML += `
-                <div id="person${i}" class="text-center col-sm-6">
-                    <img src="assets/${testimonials[i]["name"]}.jpg" width="500px" height="500px" alt="Person ${i}" class="img-fluid my-5">
-                    <p class="personName${i}" id="personName${i}">${testimonials[i]["name"]}</p>
-                    <p class="personTitle${i}">${testimonials[i]["title"]}</p>
-                    <p class="personQuote${i}">${testimonials[i]["quote"]}<i class="text-muted"></i></p>
-                </div>`;
+      testContainer.innerHTML += testimonials[i].getHTML();
     }
   }
   testimonialRender();
