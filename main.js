@@ -61,32 +61,48 @@
 // console.log(myCar.description());
 
 $("document").ready(function () {
-  let person1 = {
-    name: "Blake",
-    title: "Chief of Design",
-    quote: "Aron is the best!",
-    getQuote() {
-      if (person1.quote !== "" && person1.quote !== " ") {
-        return `${person1.quote}`;
-      } else {
-        return "A quote does not exist";
-      }
+  let testimonials = [
+    {
+      name: "Blake",
+      title: "Chief of Designing",
+      quote: "Aron is the best!",
+      getQuote() {
+        if (this.quote !== "" && this.quote !== " ") {
+          return `${this.quote}`;
+        } else {
+          return "A quote does not exist";
+        }
+      },
     },
-  };
+    {
+      name: "Kevin",
+      title: "Chief of People",
+      quote: "I second whatever Blake said!",
+      getQuote() {
+        if (this.quote !== "" && this.quote !== " ") {
+          return `${this.quote}`;
+        } else {
+          return "A quote does not exist";
+        }
+      },
+    },
+  ];
+  //   console.log(person1.getQuote(), person2.getQuote());
 
-  let person2 = {
-    name: "Kevin",
-    title: "Chief of People",
-    quote: "I second whatever Blake said!",
-    getQuote() {
-      if (person2.quote !== "" && person2.quote !== " ") {
-        return `${person2.quote}`;
-      } else {
-        return "A quote does not exist";
-      }
-    },
-  };
-  console.log(person1.getQuote(), person2.getQuote());
+  let testContainer = document.querySelector(".people");
+  function testimonialRender() {
+    testContainer.innerHTML = "";
+    for (let i = 0; i < testimonials.length; i++) {
+      testContainer.innerHTML += `
+                <div id="person${i}" class="text-center col-sm-6">
+                    <img src="assets/${testimonials[i]["name"]}.jpg" width="500px" height="500px" alt="Person ${i}" class="img-fluid my-5">
+                    <p class="personName${i}" id="personName${i}">${testimonials[i]["name"]}</p>
+                    <p class="personTitle${i}">${testimonials[i]["title"]}</p>
+                    <p class="personQuote${i}">${testimonials[i]["quote"]}<i class="text-muted"></i></p>
+                </div>`;
+    }
+  }
+  testimonialRender();
 
   //   $(".personName").text("I am a dinosaur");
   //   $(".personName").css("background-color", "white").css("color", "blue");
@@ -99,12 +115,12 @@ $("document").ready(function () {
   //     $(".formMessage").text($(".formName").val());
   //   });
 
-  $(".personName1").text(person1.name);
-  $(".personTitle1").text(person1.title);
-  $(".personQuote1").text(person1.quote);
-  $(".personName2").text(person2.name);
-  $(".personTitle2").text(person2.title);
-  $(".personQuote2").text(person2.quote);
+  //   $(".personName1").text(person1.name);
+  //   $(".personTitle1").text(person1.title);
+  //   $(".personQuote1").text(person1.quote);
+  //   $(".personName2").text(person2.name);
+  //   $(".personTitle2").text(person2.title);
+  //   $(".personQuote2").text(person2.quote);
 
   $(".formBtn").click(function () {
     $(".confirmationText").text(
