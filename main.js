@@ -60,16 +60,56 @@
 // let whereIsIt = myCar.city;
 // console.log(myCar.description());
 
-let person1 = {
-  name: "Blake",
-  title: "Chief of Design",
-  quote: "Aron is the best!",
-};
+$("document").ready(function () {
+  let person1 = {
+    name: "Blake",
+    title: "Chief of Design",
+    quote: "Aron is the best!",
+    getQuote() {
+      if (person1.quote !== "" && person1.quote !== " ") {
+        return `${person1.quote}`;
+      } else {
+        return "A quote does not exist";
+      }
+    },
+  };
 
-let person2 = {
-  name: "Kevin",
-  title: "Chief of People",
-  quote: "I second whatever Blake said!",
-};
+  let person2 = {
+    name: "Kevin",
+    title: "Chief of People",
+    quote: "I second whatever Blake said!",
+    getQuote() {
+      if (person2.quote !== "" && person2.quote !== " ") {
+        return `${person2.quote}`;
+      } else {
+        return "A quote does not exist";
+      }
+    },
+  };
+  console.log(person1.getQuote(), person2.getQuote());
 
-console.log(person1, person2);
+  //   $(".personName").text("I am a dinosaur");
+  //   $(".personName").css("background-color", "white").css("color", "blue");
+
+  //   $(".personName").on("mouseover", function () {
+  //     $(".personName").text("Blake is Blake");
+  //   });
+
+  //   $(".formButton").on("click", function () {
+  //     $(".formMessage").text($(".formName").val());
+  //   });
+
+  $(".personName1").text(person1.name);
+  $(".personTitle1").text(person1.title);
+  $(".personQuote1").text(person1.quote);
+  $(".personName2").text(person2.name);
+  $(".personTitle2").text(person2.title);
+  $(".personQuote2").text(person2.quote);
+
+  $(".formBtn").click(function () {
+    $(".confirmationText").text(
+      `Email confirmation has been sent to ${$(".formEmail").val()}`
+    );
+    console.log($(".formEmail").val());
+  });
+});

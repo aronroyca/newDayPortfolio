@@ -82,15 +82,15 @@
             <div class="people row">
                 <div id="person1" class="text-center col-sm-6">
                     <img src="assets/Blake.jpg" width="500px" height="500px" alt="Person 1" class="img-fluid my-5">
-                    <p>Blake</p>
-                    <p>Chief of Design</p>
-                    <p class="text-muted">Aron is the best!</p>
+                    <p class="personName1" id="personName1"></p>
+                    <p class="personTitle1"></p>
+                    <p class="personQuote1"><i class="text-muted"></i></p>
                 </div>
                 <div id="person2" class="text-center col-sm-6">
                     <img src="assets/Kevin.jpg" width="500px" height="500px" alt="Person 2" class="img-fluid my-5">
-                    <p>Kevin</p>
-                    <p>Chief of People</p>
-                    <p class="text-muted">I second whatever Blake said!</p>
+                    <p class="personName2" id="personName2"></p>
+                    <p class="personTitle2"></p>
+                    <p class="personQuote2"><i class="text-muted"></i></p>
                 </div>
             </div>
         </section>
@@ -105,15 +105,16 @@
                 <p><a href="#">Email</i></a></p>
             </div>
             <br>
-            <p>Let's get in touch. Send me a message.</p>
+            <p class="formMessage">Let's get in touch. Send me a message.</p>
             <form>
                 <div class="form-group">
-                    <input type="text" placeholder="Name" required name="Name">
-                    <input type="text" placeholder="Email" required name="Email">
+                    <input class="formName" type="text" placeholder="Name" required name="Name">
+                    <input class="formEmail" type="text" placeholder="Email" required name="Email">
                     <input type="text" placeholder="Subject" required name="Subject">
                     <input type="text" placeholder="Message" required name="Message">
                 </div>
-                <button type="submit" class="btn btn-primary">Send Message</button>
+                <button type="submit" class="formBtn btn btn-primary">Send Message</button>
+                <div class="confirmationText"></div>
             </form>
         </section>
         <!-- end of contact -->
@@ -129,9 +130,9 @@
     </main>
     <!-- end of main wrapper -->
 
-    <script src="main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="dependencies/popper.js"></script>
     <script src="https://cdn.usebootstrap.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
